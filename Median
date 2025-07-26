@@ -1,0 +1,8 @@
+arr=list(map(int,input().split()))
+arr.sort()
+n=len(arr)
+med=n//2
+if n%2 == 0:
+    print((arr[med-1] + arr[med])//2)
+else:
+    print(arr[med])
