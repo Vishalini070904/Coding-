@@ -1,0 +1,17 @@
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+head=node(1)
+head.next=node(2)
+head.next.next=node(3)
+
+def rev(head):
+    prev=None
+    while head:
+        head.next,prev,head=prev,head,head.next
+    return prev
+reverse=rev(head)
+while reverse:
+    print(reverse.data,end=" -> " if reverse.next else " ")
+    reverse=reverse.next
